@@ -23,6 +23,9 @@ public class PockerCard extends ConstraintLayout {
         leftPoint = findViewById(R.id.left_point);
         rightPoint = findViewById(R.id.right_point);
     }
+    public int getValue(){
+        return value;
+    }
     public void setValue(int value){
         this.value = value;
         int type = value / 13;

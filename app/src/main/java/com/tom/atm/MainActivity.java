@@ -19,6 +19,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_LOGIC = 110;
     boolean logon = false;
+    private PockerCard card;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
-                int value = new Random().nextInt(10) + 1;
+                card.setValue(51);
             }
         });
         if(!logon){
