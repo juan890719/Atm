@@ -21,18 +21,20 @@ public class MainActivity extends AppCompatActivity {
     boolean logon = false;
     private PockerCard card;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        card = findViewById(R.id.card);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                card.setValue(51);
+                card.setValue(2);
             }
         });
         if(!logon){
