@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                card.setValue(2);
+                int secert = new Random().nextInt(52);
+                card.setValue(secert);
             }
         });
         if(!logon){
