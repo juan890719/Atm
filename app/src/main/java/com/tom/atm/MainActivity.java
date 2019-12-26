@@ -28,11 +28,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        card = findViewById(R.id.pocker);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                card.setValue(51);
+                int secret = new Random().nextInt(51) + 1;
+                card.setValue(secret);
             }
         });
         if(!logon){

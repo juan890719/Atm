@@ -44,7 +44,25 @@ public class PockerCard extends ConstraintLayout {
                 typeImage.setImageResource(R.drawable.spades);
                 break;
         }
-        leftPoint.setText(point + "");
-        rightPoint.setText(point + "");
+        if (point == 1){
+            leftPoint.setText("A");
+            rightPoint.setText("A");
+        }
+        else if (point == 11){
+            leftPoint.setText("J");
+            rightPoint.setText("J");
+        }
+        else if (point == 12){
+            leftPoint.setText("Q");
+            rightPoint.setText("Q");
+        }
+        else if (point == 13){
+            leftPoint.setText("K");
+            rightPoint.setText("K");
+        }
+        else {
+            leftPoint.setText(point + "");
+            rightPoint.setText(point + "");
+        }
     }
 }
